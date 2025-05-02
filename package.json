@@ -1,9 +1,11 @@
 {
   "name": "calorie-counter",
+  "proxy": "http://localhost:4000",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.7.0",
+    "@tanstack/react-query": "^5.75.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
@@ -18,7 +20,9 @@
   },
   "scripts": {
     "convert:xlsx": "node scripts/createJSON.js",
-    "start": "react-scripts start",
+    "start": "concurrently \"npm run start-react\" \"npm run start-flask\"",
+    "start-flask": "src/server/start_flask.sh",
+    "start-react": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -40,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   }
 }

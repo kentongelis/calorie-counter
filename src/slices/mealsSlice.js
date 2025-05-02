@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const mealsSlice = createSlice({
     name: "meals",
-    intialState: {
+    initialState: {
         breakfast: [],
         lunch: [],
         dinner: [],
