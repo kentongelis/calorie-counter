@@ -1,6 +1,6 @@
 export const loadState = () => {
     try {
-        const saved = localStorage.getItem("meals");
+        const saved = localStorage.getItem("appState");
         return saved ? JSON.parse(saved) : undefined;
     } catch (e) {
         console.error("Load error:", e);
@@ -11,7 +11,7 @@ export const loadState = () => {
 export const saveState = (state) => {
     try {
         const json = JSON.stringify(state);
-        localStorage.setItem("meals", json);
+        localStorage.setItem("appState", json);
     } catch (e) {
         console.error("Save error:", e);
     }

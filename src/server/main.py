@@ -7,11 +7,6 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route("/")
-def home():
-    return "<h1>test</h1>"
-
-
 @app.route("/foodData")
 def data():
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))

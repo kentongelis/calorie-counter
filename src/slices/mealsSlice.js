@@ -3,14 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 const mealsSlice = createSlice({
     name: "meals",
     initialState: {
-        breakfast: [],
-        lunch: [],
-        dinner: [],
+        Breakfast: [],
+        Lunch: [],
+        Dinner: [],
     },
     reducers: {
         addMeal: (state, action) => {
             const { mealType, item } = action.payload;
-            state[mealType].push(item)
+            state[mealType].push(item);
         },
         clearMeals: (state, action) => {
             const { mealType } = action.payload;

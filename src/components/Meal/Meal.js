@@ -1,19 +1,8 @@
-import useFoodData from '../foodData/usefoodData.js';
-
-const Meal = () => {
-    const { data, isLoading, error } = useFoodData();
-
-    console.log(data)
-
-    if (isLoading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error.message}</p>;
-
+const Meal = ({mealName}) => {
     return (
-        <ul>
-        {data.map((item) => (
-            <li key={item.id}>{item.name}</li>
-        ))}
-        </ul>
+        <div>
+            <h1>{mealName}</h1>
+        </div>
     );
 }
 
