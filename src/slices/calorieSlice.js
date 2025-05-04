@@ -4,12 +4,8 @@ const caloriesSlice = createSlice({
     name: "calories",
     initialState: 0,
     reducers: {
-        addCalories: (state, action) => {
-            state += action.payload;
-        },
-        resetCalories: (state) => {
-            state = 0;
-        }
+        addCalories: (state, action) => state += action.payload,
+        resetCalories: () => 0
     }
 });
 

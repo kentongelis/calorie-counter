@@ -12,12 +12,13 @@ const mealsSlice = createSlice({
             const { mealType, item } = action.payload;
             state[mealType].push(item);
         },
-        clearMeals: (state, action) => {
-            const { mealType } = action.payload;
-            state[mealType] = [];
+        clearMeals: (state) => {
+            state["Breakfast"] = [];
+            state["Lunch"] = [];
+            state["Dinner"] = [];
         }
     }
 });
 
-export const { addMeal } = mealsSlice.actions;
+export const { addMeal, clearMeals } = mealsSlice.actions;
 export default mealsSlice.reducer;
