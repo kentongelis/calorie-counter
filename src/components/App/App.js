@@ -8,10 +8,16 @@ const App = () => {
     <div className="App">
       <h1>Calorie Counter</h1>
       <Calorie />
-      <Search />
-      <Meal mealName="Breakfast"/>
-      <Meal mealName="Lunch"/>
-      <Meal mealName="Dinner"/>
+      <div className="main">
+        <div className="left">
+          <Meal mealName="Breakfast"/>
+          <Meal mealName="Lunch"/>
+          <Meal mealName="Dinner"/>
+        </div>
+        <div className="right">
+          <Search />
+        </div>
+      </div>
     </div>
   );
 }
