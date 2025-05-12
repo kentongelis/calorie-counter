@@ -6,36 +6,36 @@
     box-shadow: var(--box-shadow);
   }
   
-  .meal-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem 1.5rem;
-    font-size: 1.3rem;
-    margin: 0;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: var(--transition);
-  }
-  
-  .meal-header:hover {
-    background-color: var(--secondary-color);
-  }
-  
-  .meal-content {
-    padding: 1.5rem;
-  }
-  
-  .no-meals {
-    color: var(--text-light);
-    text-align: center;
-    padding: 2rem 0;
-    font-style: italic;
-  }
-  
-  .meal-foods {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
+.meal-header {
+background-color: var(--primary-color);
+color: white;
+padding: 1rem 1.5rem;
+font-size: 1.3rem;
+margin: 0;
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+align-items: center;
+transition: var(--transition);
+}
+
+.meal-header:hover {
+background-color: var(--secondary-color);
+}
+
+.meal-content {
+padding: 1.5rem;
+}
+
+.no-meals {
+color: var(--text-light);
+text-align: center;
+padding: 2rem 0;
+font-style: italic;
+}
+
+.meal-foods {
+display: flex;
+flex-direction: column;
+gap: 0.75rem;
+}
