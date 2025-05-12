@@ -20,6 +20,5 @@ store.subscribe(() => {
     saveState({ 
         meals: state.meals,
         calories: state.calories,
-        current: state.current
     });
 });

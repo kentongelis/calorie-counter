@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Food from '../Food/Food.js'
 import { addMeal } from '../../slices/mealsSlice.js'
 import { addCalories } from '../../slices/calorieSlice.js'
@@ -10,6 +10,9 @@ const Search = () => {
     const [value, updateValue] = useState('');
 
     const dispatch = useDispatch();
+
+    const current = useSelector(state => state.current);
+
 
     const { data, isLoading, error } = useQuery({
         queryKey: ['foodData'],
@@ -21,7 +24,7 @@ const Search = () => {
     });
 
     const selectedMeal = (item) => {
-        dispatch(addMeal({mealType: "Breakfast", item: item}));
+        dispatch(addMeal({mealType: `${current}`, item: item}));
         dispatch(addCalories(Math.round(item.Calories)))
     }
 

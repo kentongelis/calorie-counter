@@ -1,7 +1,8 @@
 import './App.css';
-import Meal from '../Meal/Meal.js';
+import MealsList from '../MealsList/MealsList.js';
 import Search from '../Search/Search.js';
 import Calorie from '../Calorie/Calorie.js';
+import Scheduler from '../Scheduler/Scheduler.js';
 
 const App = () => {
   return (
@@ -10,14 +11,13 @@ const App = () => {
       <Calorie />
       <div className="main">
         <div className="left">
-          <Meal mealName="Breakfast"/>
-          <Meal mealName="Lunch"/>
-          <Meal mealName="Dinner"/>
+          <MealsList />
         </div>
         <div className="right">
           <Search />
         </div>
       </div>
+      <Scheduler />
     </div>
   );
 }
