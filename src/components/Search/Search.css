@@ -1,0 +1,87 @@
+.search-container {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+  }
+  
+.search-title {
+margin-bottom: 1rem;
+color: var(--primary-color);
+font-size: 1.5rem;
+border-bottom: 2px solid var(--secondary-color);
+padding-bottom: 0.5rem;
+}
+
+.search-input {
+width: 100%;
+padding: 0.8rem 1rem;
+border: 1px solid #e0e0e0;
+border-radius: var(--border-radius);
+font-size: 1rem;
+transition: var(--transition);
+margin-bottom: 1rem;
+font-family: 'Poppins', sans-serif;
+}
+
+.search-input:focus {
+outline: none;
+border-color: var(--primary-color);
+box-shadow: 0 0 0 2px rgba(74, 111, 165, 0.2);
+}
+
+.search-results {
+max-height: 400px;
+overflow-y: auto;
+}
+
+.search-result-item {
+padding: 1rem;
+border-bottom: 1px solid #eee;
+cursor: pointer;
+transition: var(--transition);
+}
+
+.search-result-item:hover {
+background-color: rgba(74, 111, 165, 0.1);
+}
+
+.search-result-name {
+font-weight: 500;
+color: var(--primary-color);
+}
+
+.search-result-calories {
+color: var(--accent-color);
+font-size: 0.9rem;
+}
+
+.search-loading {
+text-align: center;
+padding: 2rem 0;
+}
+
+.search-no-results {
+text-align: center;
+color: var(--text-light);
+padding: 2rem 0;
+}
+
+/* Custom scrollbar for search results */
+.search-results::-webkit-scrollbar {
+width: 8px;
+}
+
+.search-results::-webkit-scrollbar-track {
+background: #f1f1f1;
+border-radius: 10px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+background: var(--secondary-color);
+border-radius: 10px;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+background: var(--primary-color);
+}

@@ -1,13 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const caloriesSlice = createSlice({
+const calorieSlice = createSlice({
     name: "calories",
     initialState: 0,
     reducers: {
-        addCalories: (state, action) => state += action.payload,
-        resetCalories: () => 0
+        addCalories: (state, action) => {
+            return state + action.payload;
+        },
+        subtractCalories: (state, action) => {
+            return state - action.payload;
+        },
+        resetCalories: () => {
+            return 0;
+        }
     }
 });
 
-export const { addCalories, resetCalories } = caloriesSlice.actions;
-export default caloriesSlice.reducer;
+export const { addCalories, subtractCalories, resetCalories } = calorieSlice.actions;
+export default calorieSlice.reducer;

@@ -1,0 +1,57 @@
+.food-item {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    border-left: 4px solid var(--secondary-color);
+  }
+  
+.food-item:hover {
+transform: translateY(-2px);
+box-shadow: var(--box-shadow);
+}
+
+.food-name {
+color: var(--primary-color);
+margin-bottom: 0.5rem;
+}
+
+.food-details {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.food-portion {
+color: var(--text-light);
+font-size: 0.9rem;
+}
+
+.food-calories {
+font-weight: 600;
+color: var(--accent-color);
+background-color: rgba(238, 108, 77, 0.1);
+padding: 0.25rem 0.75rem;
+border-radius: 20px;
+font-size: 0.9rem;
+}
+
+.remove-food-btn {
+background-color: #f44336;
+color: white;
+border: none;
+border-radius: var(--border-radius);
+padding: 0.4rem 0.8rem;
+font-size: 0.8rem;
+cursor: pointer;
+margin-top: 0.5rem;
+transition: var(--transition);
+display: block;
+width: 100%;
+}
+
+.remove-food-btn:hover {
+background-color: #d32f2f;
+}

@@ -6,19 +6,31 @@ const mealsSlice = createSlice({
         Breakfast: [],
         Lunch: [],
         Dinner: [],
+        Snacks: [],
     },
     reducers: {
         addMeal: (state, action) => {
             const { mealType, item } = action.payload;
-            state[mealType].push(item);
+            const itemWithId = {
+                ...item,
+                uniqueId: item.uniqueId || `${item.id}-${Date.now()}`
+            };
+            state[mealType].push(itemWithId);
+        },
+        removeMeal: (state, action) => {
+            const { mealType, uniqueId } = action.payload;
+            state[mealType] = state[mealType].filter(
+                item => item.uniqueId !== uniqueId
+            );
         },
         clearMeals: (state) => {
             state["Breakfast"] = [];
             state["Lunch"] = [];
             state["Dinner"] = [];
+            state["Snacks"] = [];
         }
     }
 });
 
-export const { addMeal, clearMeals } = mealsSlice.actions;
+export const { addMeal, removeMeal, clearMeals } = mealsSlice.actions;
 export default mealsSlice.reducer;
