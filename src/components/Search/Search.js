@@ -14,7 +14,7 @@ const Search = () => {
     const { data, isLoading, error } = useQuery({
         queryKey: ['foodData'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:4000/foodData');
+            const res = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:4000'}/foodData`);
             if (!res.ok) throw new Error('Failed to fetch');
             return res.json();          
         }

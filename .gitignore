@@ -24,3 +24,7 @@ yarn-error.log*
 
 # .xlsx file
 Food_Display_Table.xlsx
+
+# python
+src/server/venv/
+__pycache__/
